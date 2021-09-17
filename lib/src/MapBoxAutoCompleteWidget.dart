@@ -65,7 +65,7 @@ class _MapBoxAutoCompleteWidgetState extends State<MapBoxAutoCompleteWidget> {
         url += "&country=${widget.country}";
       }
       final response = await http.get(Uri.parse(url));
-      print("Response " + response.body);
+//       print("Response " + response.body);
       // // final json = jsonDecode(response.body);
       final predictions = Predections.fromRawJson(response.body);
 
@@ -112,7 +112,7 @@ class _MapBoxAutoCompleteWidgetState extends State<MapBoxAutoCompleteWidget> {
           MapBoxPlace _singlePlace = _placePredictions!.features![i];
           return ListTile(
             title: Text(_singlePlace.text!),
-            subtitle: Text(_singlePlace.center.toString()),
+            subtitle: Text(_singlePlace.placeName),
             onTap: () => _selectPlace(_singlePlace),
           );
         },
