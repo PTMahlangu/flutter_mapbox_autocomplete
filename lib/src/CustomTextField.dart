@@ -68,6 +68,7 @@ class CustomTextField extends StatelessWidget {
           fontSize: 14,
         ),
       ),
+      style: TextStyle(fontSize: 16, color: Colors.blueGrey),
       enabled: enabled,
       obscureText: obscureText,
       readOnly: readOnly,
