@@ -73,7 +73,7 @@ class _MapBoxAutoCompleteWidgetState extends State<MapBoxAutoCompleteWidget> {
 
       setState(() {
         _placePredictions = predictions;
-         print(_placePredictions.features.toString());
+         print(_placePredictions.features[0].toString());
       });
     } else {
       setState(() => _placePredictions = Predections.empty());
