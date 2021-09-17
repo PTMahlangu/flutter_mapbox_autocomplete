@@ -50,7 +50,7 @@ class CustomTextField extends StatelessWidget {
         suffixIcon: suffixIcon,
         border: OutlineInputBorder(
           borderRadius: const BorderRadius.all(
-            const Radius.circular(4),
+            const Radius.circular(10),
           ),
         ),
         enabledBorder: const OutlineInputBorder(
@@ -77,6 +77,7 @@ class CustomTextField extends StatelessWidget {
       validator: validator as String? Function(String?)?,
       onSaved: onSaved as void Function(String?)?,
       focusNode: focusNode,
+      autofocus: true,
       onTap: onTap as void Function()?,
       onChanged: onChanged as void Function(String)?,
       onFieldSubmitted: onFieldSubmitted as void Function(String)?,
